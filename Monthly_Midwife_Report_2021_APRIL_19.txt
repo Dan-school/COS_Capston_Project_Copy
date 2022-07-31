@@ -1,0 +1,49 @@
+MONTHLY MIDWIFE REPORT - ANTENTAL TEAM
+Year: 2021 Month: APRIL
+
+
+# of Registrants: 1
+Attendances: 0
+# making 4th visits: 0
+TT 2+ vaccination: 0 
+
+AGE OF MOTHER REGISTRATION (YEARS)
+10-14: 0
+15-19: 0
+20-24: 0
+25-29: 1
+30-34: 0
+35+: 0
+
+PARITY
+0: 0
+1-2: 0
+3-4: 0
+5+: 0
+
+DURATION OF PREGNANCY AT REGISTRATION
+1st Trim: 0
+2nd Trim: 0
+3rd Trim: 0
+
+HEMOGLOBIN AT REGIST. & 36 WKS.
+Clients with HB checked at Registration: 1
+Clients with HB <11 gm/dl at registration: 0
+Clients with HB <7 gm/dl at registration: 0
+Clients with HB checked at 36 weeks: 0
+Clients with HB <11 gm/dl at 36 weeks: 0
+Clients with HB <7 gm/dl at 36 weeks: 0
+
+IPT
+ITP 1: 0
+ITP 2: 0
+ITP 3: 0
+
+ITN
+Visits: 0
+
+PMTCT
+# Counselled: 0
+# Tested: 1
+# Positive: 0
+# Mothers on ARV: 0

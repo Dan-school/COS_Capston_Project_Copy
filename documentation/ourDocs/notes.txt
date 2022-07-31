@@ -1,0 +1,17 @@
+
+//Table Example
+    //bulding that table
+    public void displayCustomers(){
+		String customersVInfo[][] = new String [atMyService.getAllCustomers().size()][];
+		for(int i =0; i <atMyService.getAllCustomers().size(); i++){
+			customersVInfo[i] = atMyService.getAllCustomers().get(i).getInfo();
+		}
+		view.buildTable(0, customersVInfo);
+	}
+
+    //printTable
+   public void buildTable(String[][] tableInfo){
+        TextTable table;
+          table = new TextTable(customerInfoFields,tableInfo);
+          table.printTable();
+   }

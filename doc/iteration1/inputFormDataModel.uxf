@@ -1,0 +1,61 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>384</x><y>146</y><w>210</w><h>420</h></coordinates><panel_attributes>CareRegister
+--
+-patient: Patient
+-serialNumber: Long
+-parity: Parity
+-bloodPressure: String
+-height:int
+-weight: double
+-gestation: int
+-fundalHeight: int
+-edd: LocalDate
+-hemoReg: double
+-hemoWeek36: double
+-bloodType: String
+-sickling: Sickling
+-vdrl: boolean
+-pmtct: PMTCT
+-subsequentVistits: Visit[]
+-tt: TT
+-ipt: IPT
+-itnUse: boolean
+-complaints: String
+-remarks: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>714</x><y>136</y><w>210</w><h>70</h></coordinates><panel_attributes>Sickling
+--
+-status: boolean
+-type: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>584</x><y>136</y><w>150</w><h>300</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;280;130;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>714</x><y>266</y><w>210</w><h>70</h></coordinates><panel_attributes>PMTCT
+--
+-pretest: boolean
+-testResult: boolean
+-postTest: boolean
+-arv: boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>584</x><y>276</y><w>150</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;170;130;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>714</x><y>386</y><w>210</w><h>120</h></coordinates><panel_attributes>Visit
+--
+-date: LocalDate
+-bloodPressure: String
+-weight: double
+-fundalHeight: int
+-bloodFilm: boolean
+-referred: String? No docs for this</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>584</x><y>386</y><w>150</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;80;130;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>714</x><y>526</y><w>210</w><h>90</h></coordinates><panel_attributes>TT
+--
+-firstDose: boolean
+-secondDose: boolean
+-boosterDose: boolean
+-protected: boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>714</x><y>636</y><w>210</w><h>70</h></coordinates><panel_attributes>IPT
+--
+-firstDose: boolean
+-secondDose: boolean
+-thirdDose: boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>584</x><y>496</y><w>150</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;130;150</additional_attributes></element><element><id>Relation</id><coordinates><x>584</x><y>476</y><w>150</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;130;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>154</x><y>86</y><w>180</w><h>190</h></coordinates><panel_attributes>Patient
+--
+outpatientNumber
+registrationNumber
+name
+address 
+Date of Birth
+sex
+guardians
+dependants
+
+Provided by care register team</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>75</y><w>70</w><h>150</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>50;130;10;11</additional_attributes></element><element><id>UMLClass</id><coordinates><x>710</x><y>30</y><w>210</w><h>70</h></coordinates><panel_attributes>Sickling
+--
+-status: boolean
+-type: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>580</x><y>30</y><w>150</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;190;130;10</additional_attributes></element></diagram>

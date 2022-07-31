@@ -1,0 +1,113 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>1063</x><y>10</y><w>570</w><h>450</h></coordinates><panel_attributes>AntenatalModel
+--
+- serialVersionUID: long
+- serialNumber: long
+- COUNTER: long
+- Parity: parity
+- BloodPressure
+- int: height
+- int weight
+- int gestation
+- fundalHeight
+--
++ AntenatalModel()
++ AntenatalModel(parity: int, gravidity: int, systolic: int, diastolic: int, height: int, wieght: int, gestation: int)
++ generateSerialNumber() : long
++ getSerialNumber() : long
++ getParity() : String
++ getBloodPressure() : String
++ getHeight() : int
++ getWeight(): int
++ getGestation() : int
++ getFundalHeight() : int
++ setParity(gravidity: int, parity: int)
++ setBloodPressure(systolic: int, diastolic: int)
++ setHeight(height: int)
++ setWeight(weight: int)
++ setGestation(gestation: int)
++ setFundalHeight(fundalHeight: int)
++ setSerialNumber(serialNumber: Long)
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>763</x><y>20</y><w>240</w><h>190</h></coordinates><panel_attributes>BloodPressure
+--
+- systolic: int
+- diastolic: int
+--
++ BloodPressure()
++ BloodPressure(systolic: int, diastolic: int)
++ getSystolic(): int
++ getDiastolic(): int
++ setSystolic(systolic: int)
++ setDiastolic(diastolic: int)
++ toString(): String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>763</x><y>230</y><w>240</w><h>190</h></coordinates><panel_attributes>Parity
+--
+- gravidity: int
+- parity: int
+--
++ Parity()
++ Parity(parity: int, gravidity: int)
++ getParity(): int
++ getGravidity(): int
++ setParity(parity: int)
++ setGravidity(gravidity: int)
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>993</x><y>200</y><w>90</w><h>50</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;30;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>993</x><y>0</y><w>90</w><h>40</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;20;70;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1143</x><y>710</y><w>290</w><h>180</h></coordinates><panel_attributes>AntenatalService
+--
++ dao: AntenatalModelDao
+--
++ AntenatalService()
++ AntenatalService(dao: AntenatalModelDao)
++ addAntenatalModel(model: AntenatalModel)
++ updateAntenatalModel(model: AntenatalModel)
++ updateAntenatalModel(id: Long)
++ getAntenatalModels(): List&lt;AntenatalModel&gt;
++ getAntenatalModel(id: Long): AntenatalModel
++ maxItemId(): Long</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>1933</x><y>900</y><w>220</w><h>90</h></coordinates><panel_attributes>Interacts with pre-defined 
+DAO objects from Assignment #1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1483</x><y>710</y><w>370</w><h>200</h></coordinates><panel_attributes>AntenatalModelDao
+--
+- antenatalModelDao: GenericDao&lt;Long, AntenatalModel&gt;
+--
++ AntenatalModelDao()
++ AntenatalModelDao(fileName: String)
++ AntenatalModelDao(dao: GenericDao&lt;Long, AntenatalModel&gt;)
++ getAntenatalModelDao(): GenericDao&lt;Long, AntenatalModel&gt;
++ add(entity: AntenatalModel)
++ update(entity: AntenatalModel)
++ remove(id: Long)
++ find(key: Long)
++ list(): List&lt;AntenatalModel&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1843</x><y>880</y><w>110</w><h>50</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;30;90;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1423</x><y>800</y><w>80</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>894</x><y>580</y><w>110</w><h>50</h></coordinates><panel_attributes>AntenatalApp
+--
++ main()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>354</x><y>740</y><w>290</w><h>150</h></coordinates><panel_attributes>View
+--
++ scnr: Scanner
+--
++ View()
++ readIntWithPrompt(prompt: String): int
++ readStringWIthPrompt(prompt: String): String
++ promptUser(prompt: String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>700</y><w>270</w><h>260</h></coordinates><panel_attributes>RegisterView
+--
+- NO_CHOICE: int = 0
+- ADD_VISIT: int = 1
+- UPDATEPATIENTVISIT: int = 2
+- GETALLPATIENTVISITS: int = 3
+- CHANGEPARITY: int = 4
+- BLOODPRESSURE: int = 5
+- CHANGEHEIGHT: int = 6
+- CHANGEWEIGHT: int = 7
+- CHANGEGESTATION: int = 8
+- CHANGEFUDALHEIGHT: int = 9
+- EXIT: int = 10
+--
++ displayMainMenu()
++ UpdateChoiceMenu()
++ printPatientVisitHistory(tableInfo: String[][])</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>740</x><y>740</y><w>330</w><h>200</h></coordinates><panel_attributes>AntenatalController
+--
+- service: AntenatalService
+- rView: RegisterView
+- view: View
+--
++ addVisit()
++ updatePatientVisitInfo()
++ updateChoice(choice: int, updateVisit: AntenatalModel)
++ getAllPatientInfo()
++ provideAccess()
++ mainMenu(choice: int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>900</y><w>640</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;620;40</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>760</y><w>130</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;20;110;10</additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>620</y><w>110</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;120;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>980</x><y>620</y><w>190</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>170;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>590</y><w>650</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;110;630;10</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>620</y><w>290</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;120;270;10</additional_attributes></element><element><id>Relation</id><coordinates><x>990</x><y>450</y><w>130</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>110;10;10;130</additional_attributes></element></diagram>

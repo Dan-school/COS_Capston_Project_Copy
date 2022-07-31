@@ -1,0 +1,8 @@
+Iteration 3
+Project Leader: Jordan
+
+Team 1: Riley and Dan
+Having the experience from building the GUI in iteration 2 Dan joined forces with Riley to tackle the form validation for visits. Along the way the form was split into initial visit and subsequent.
+
+Team 2: Zack and Hamza
+With last iteration seeing huge amounts of progress go into building the GUI for antenatal visits Zack and Hamza tackled the growing problem of the lack of unit testing found in our code base. Due to the nature of this sprint these tests had to be updated and modified several times as Dan and Riley progressed on their projects.
